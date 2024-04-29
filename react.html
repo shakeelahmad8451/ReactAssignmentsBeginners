@@ -1,0 +1,45 @@
+<!-- React CDN (content delivery network) files works the same way as we import some css files or js files 
+By importing these two cdn we can use react without anything extra. -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using React Cdn</title>
+</head>
+<body id="root">
+
+    <!-- Make this Container using only React -->
+    <!-- <div id="container">
+        <h1>Hello heading 1</h1>
+        <h2>Hello heading 2</h2>
+    </div> -->
+    
+    <!-- <div id="root"></div> -->
+
+
+    <!-- Importing cdn of REACT  -->
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+
+    <script>
+        // In react the main object is React and it needs one element where it can render itself let's say root so created in html and here
+        const root=ReactDOM.createRoot(document.getElementById('root'));
+
+       /* The createElement method accepts 3 parameters 
+            1. type of the Element
+            2. object where you can pass attributes and classes and more ..Element
+            3. And then the third which is text or it can also take array of other elements.
+        */ 
+        const heading1=React.createElement('h1',{},'Hello heading 1');
+        console.log(heading1);
+        const heading2=React.createElement('h2',{id:'heading2'},'Hello heading 2');
+        console.log(heading2);
+
+        root.render([heading1,heading2]);
+
+
+    </script>
+
+</body>
+</html>

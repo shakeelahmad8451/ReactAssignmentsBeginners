@@ -1,0 +1,37 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+
+    <!-- Make this Container using only javascript and then React -->
+    <!-- <div id="container">
+        <h1>Hello heading 1</h1>
+        <h2>Hello heading 2</h2>
+    </div> -->
+
+    
+    
+    <script>
+
+        const container=document.createElement('div');
+        const heading1=document.createElement('h1');
+        const heading2=document.createElement('h2');
+
+        heading1.innerHTML='Hello heading 1';
+        heading2.innerHTML='Hello heading 2';
+
+        document.body.appendChild(container);
+        container.appendChild(heading1);
+        container.appendChild(heading2);
+
+        console.log(container);
+        console.log(heading1);
+        console.log(heading2);
+
+
+    </script>
+</body>
+</html>
